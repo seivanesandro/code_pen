@@ -5,7 +5,7 @@ function App() {
     return (
         <>
             <Editor />
-            <div className="footer d-flex flex-lg-column align-items-md-center justify-content-center border border-secondary border-opacity-50 py-5 ">
+            <div className="footer d-flex flex-column align-items-center justify-content-center border border-secondary border-opacity-50 py-5 ">
                 <span className=" text-secondary text-opacity-50 mb-3">
                     copyrigths @ sandro seivane
                 </span>

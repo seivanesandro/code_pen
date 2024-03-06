@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 //import PropTypes from 'prop-types'
 import logo from '../assets/logo-removebg.png';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { devices } from '../utils/constantes';
 import useLocalStorage from '../storage';
 
@@ -13,13 +13,11 @@ const WrapperContainer = styled.div`
 `;
 
 const HeaderContainer = styled.header`
-background: #333;
-color: #fafafa;
-height: 21vh;
-display: flex;
-justify-content: space-between;
-
-
+    background: #333;
+    color: #fafafa;
+    height: 21vh;
+    display: flex;
+    justify-content: space-between;
 `;
 const ImgStyle = styled.img`
     margin: 0 0 0 6rem;
@@ -68,7 +66,7 @@ const TextArea = styled.textarea`
     width: 30%;
     padding: 2rem;
     &::selection {
-        background:  purple;
+        background: purple;
         color: rgb(209, 238, 246);
     }
 
@@ -105,8 +103,14 @@ const OutputContainer = styled.div`
 `;
 
 const Editor = props => {
-    const [html, setHtml] = useLocalStorage('html', '');
-    const [css, setCss] = useLocalStorage('css', '');
+    const [html, setHtml] = useLocalStorage(
+        'html',
+        ''
+    );
+    const [css, setCss] = useLocalStorage(
+        'css',
+        ''
+    );
     const [js, setJs] = useLocalStorage('js', '');
     const [codepenCode, setCodepenCode] =
         useState('');
@@ -141,7 +145,9 @@ const Editor = props => {
                         value={html}
                         type="text"
                         placeholder="Html"
-                        activeStyle={{ border: '0.1em solid rgb(203, 245, 255)' }}
+                        activeStyle={{
+                            border: '0.1em solid rgb(203, 245, 255)'
+                        }}
                         onChange={e => {
                             setHtml(
                                 e.target.value

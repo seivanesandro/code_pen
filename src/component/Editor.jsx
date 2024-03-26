@@ -112,8 +112,7 @@ const Editor = props => {
         ''
     );
     const [js, setJs] = useLocalStorage('js', '');
-    const [codepenCode, setCodepenCode] =
-        useState('');
+    const [codepenCode, setCodepenCode] = useState('');
 
     useEffect(() => {
         const timeout = setTimeout(() => {
